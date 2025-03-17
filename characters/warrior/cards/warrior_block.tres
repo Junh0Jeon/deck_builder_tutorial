@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://dcvjrm6wvdxhv"]
 
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="1_2lwoh"]
-[ext_resource type="Script" path="res://characters/warrior/cards/warrior_block.gd" id="2_o5epn"]
+[ext_resource type="Script" uid="uid://ckeyduuptpjjq" path="res://characters/warrior/cards/warrior_block.gd" id="2_o5epn"]
 
 [resource]
 script = ExtResource("2_o5epn")

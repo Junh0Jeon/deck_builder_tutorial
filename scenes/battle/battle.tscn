@@ -1,15 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://csmnj3chsuxwg"]
+[gd_scene load_steps=16 format=3 uid="uid://csmnj3chsuxwg"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_dbktu"]
-[ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_mg7be"]
+[ext_resource type="Script" uid="uid://dk5moey5r2gur" path="res://scenes/battle/battle.gd" id="1_mg7be"]
 [ext_resource type="PackedScene" uid="uid://bt8ahxvph5mk5" path="res://scenes/enemy/enemy.tscn" id="2_j5jxt"]
-[ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_xfr8c"]
+[ext_resource type="Script" uid="uid://cflbnp6ua1064" path="res://scenes/ui/hand.gd" id="2_xfr8c"]
 [ext_resource type="PackedScene" uid="uid://co36ej3gqeglu" path="res://scenes/Player/player.tscn" id="3_itiot"]
 [ext_resource type="Resource" uid="uid://c3k0gowl5t8w0" path="res://characters/warrior/warrior_stats.tres" id="4_g0qne"]
+[ext_resource type="Script" uid="uid://bwtd8pbxpl4v2" path="res://scenes/enemy/enemy_handler.gd" id="4_kd6yx"]
 [ext_resource type="Resource" uid="uid://b2wu68ahf7g8h" path="res://enemies/crab/crab_enemy.tres" id="5_y605o"]
-[ext_resource type="Script" path="res://scenes/ui/battle_ui.gd" id="7_1tpmj"]
+[ext_resource type="Script" uid="uid://dfdrll5iqxq40" path="res://scenes/ui/battle_ui.gd" id="7_1tpmj"]
 [ext_resource type="PackedScene" uid="uid://byfprl687e32r" path="res://scenes/card_target_selector/card_target_selector.tscn" id="7_ilrlb"]
-[ext_resource type="Script" path="res://scenes/Player/player_handler.gd" id="8_rwihr"]
+[ext_resource type="Script" uid="uid://dx4hgfxxgocae" path="res://scenes/Player/player_handler.gd" id="8_rwihr"]
 [ext_resource type="PackedScene" uid="uid://cg440p30gaxuq" path="res://scenes/ui/mana_ui.tscn" id="11_vm4oe"]
 [ext_resource type="PackedScene" uid="uid://hdljyem52hfw" path="res://scenes/ui/tooltip.tscn" id="12_x010w"]
 [ext_resource type="Theme" uid="uid://dq8mmqskkl7mo" path="res://main_theme.tres" id="13_avkks"]
@@ -36,7 +37,10 @@ position = Vector2(128, 50)
 shape = SubResource("RectangleShape2D_e7xde")
 debug_color = Color(0, 0.6, 0.701961, 0.121569)
 
-[node name="Enemy" parent="." instance=ExtResource("2_j5jxt")]
+[node name="EnemyHandler" type="Node2D" parent="."]
+script = ExtResource("4_kd6yx")
+
+[node name="Enemy" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
 position = Vector2(205, 76)
 enemy_stats = ExtResource("5_y605o")
 

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Stats" load_steps=3 format=3 uid="uid://cm06uufsb1ueg"]
 
-[ext_resource type="Script" path="res://custom_resources/stats.gd" id="1_36m1d"]
+[ext_resource type="Script" uid="uid://4ijkdwyqy431" path="res://custom_resources/stats.gd" id="1_36m1d"]
 [ext_resource type="Texture2D" uid="uid://1u3b3hwqd8yh" path="res://art/tile_0110.png" id="1_rdlbj"]
 
 [resource]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cg440p30gaxuq"]
 
 [ext_resource type="Theme" uid="uid://dq8mmqskkl7mo" path="res://main_theme.tres" id="1_ho7xw"]
-[ext_resource type="Script" path="res://scenes/ui/mana_ui.gd" id="2_55kvl"]
+[ext_resource type="Script" uid="uid://dqw24ogocu2xf" path="res://scenes/ui/mana_ui.gd" id="2_55kvl"]
 
 [node name="ManaUI" type="Panel"]
 anchors_preset = 2
