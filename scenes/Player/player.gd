@@ -37,4 +37,5 @@ func take_damage(damage: int) -> void:
 	character_stats.take_damage(damage)
 	
 	if character_stats.health <= 0: # character die process
+		Events.player_died.emit()
 		queue_free()

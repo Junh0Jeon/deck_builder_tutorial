@@ -41,12 +41,14 @@ func update_action() -> void:
 	if not enemy_action_picker:
 		return
 	
+	# action이 할당된게 없다면, action 할당.
 	if not current_action:
 		current_action = enemy_action_picker.get_action()
 		return
 	
-	# 현재 action이 rdy된 상태에서, stats_changed의 emit으로 인해 다시 reload되면 아랫 부분이 작동함
+	# 현재 action이 할당된 상태에서, stats_changed의 emit으로 인해 다시 reload될 경우 여기 도착.
 	# 외부 자극이 mob의 act에 영향을 주는 mechanism으로 구성된 mob action 기작임.
+	# StS의 경우 mob의 action이 외부 자극에 영향을 받는게 아니라 이런 mechanism은 아닐것임.
 	var new_conditional_action := enemy_action_picker.get_first_conditional_action()
 	if new_conditional_action and current_action != new_conditional_action:
 		current_action = new_conditional_action

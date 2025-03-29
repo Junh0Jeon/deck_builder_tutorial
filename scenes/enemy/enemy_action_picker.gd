@@ -16,7 +16,7 @@ func _set_enemy(value: Enemy) -> void:
 	actor_enemy = value
 	
 	for action in get_children():
-		action.actor = actor_enemy
+		action.enemy = actor_enemy
 
 
 func _set_target(value: Node2D) -> void:

@@ -3,7 +3,7 @@ extends Node2D
 
 
 func _ready() -> void:
-	Events.enemy_turn_ended.connect(_on_enemy_action_completed)
+	Events.enemy_action_completed.connect(_on_enemy_action_completed)
 
 
 func reset_enemy_actions() -> void:

@@ -93,3 +93,5 @@ grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("13_avkks")
 text = "End Turn"
+
+[connection signal="child_order_changed" from="EnemyHandler" to="." method="_on_enemy_handler_child_order_changed"]
