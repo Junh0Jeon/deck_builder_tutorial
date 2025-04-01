@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnuo65t2s4bhv"]
+[gd_scene load_steps=13 format=3 uid="uid://cnuo65t2s4bhv"]
 
 [ext_resource type="Theme" uid="uid://dq8mmqskkl7mo" path="res://main_theme.tres" id="1_bgema"]
 [ext_resource type="Script" uid="uid://bkkdue2lfd5t4" path="res://scenes/card_ui/card_ui.gd" id="2_wic8w"]
@@ -10,6 +10,10 @@
 [ext_resource type="Script" uid="uid://2pqm7jk36v16" path="res://scenes/card_ui/card_states/card_dragging_state.gd" id="6_x7h4g"]
 [ext_resource type="Script" uid="uid://c766otjc62ggu" path="res://scenes/card_ui/card_states/card_released_state.gd" id="7_7a611"]
 [ext_resource type="Script" uid="uid://csy5i26vw5sea" path="res://scenes/card_ui/card_states/card_aiming_state.gd" id="8_pfijc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_js3ux"]
+font_size = 6
+font_color = Color(1, 0.12549, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgt1b"]
 size = Vector2(25, 30)
@@ -43,6 +47,17 @@ layout_mode = 1
 offset_right = 13.0
 offset_bottom = 10.0
 text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IndexLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+offset_left = 12.0
+offset_right = 25.0
+offset_bottom = 10.0
+text = "test"
+label_settings = SubResource("LabelSettings_js3ux")
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -6,13 +6,6 @@ extends HBoxContainer
 @onready var card_ui := preload("res://scenes/card_ui/card_ui.tscn")
 
 
-var cards_played_this_turn := 0
-
-
-func _ready() -> void:
-	Events.card_played.connect(_on_card_played)
-
-
 func add_card(card: Card) -> void:
 	var new_card_ui := card_ui.instantiate() as CardUI
 	add_child(new_card_ui)
@@ -31,13 +24,9 @@ func disable_hand() -> void:
 		card.disabled = true
 
 
-func _on_card_played(_card: Card) -> void:
-	cards_played_this_turn += 1
-
-
 func _on_card_ui_reparent_requested(child: CardUI) -> void:
 	child.disabled = true
 	child.reparent(self)
-	var updated_index := clampi(child.original_index - cards_played_this_turn, 0, get_child_count())
+	var updated_index := clampi(child.original_index, 0, get_child_count())
 	move_child.call_deferred(child, updated_index)
 	child.set_deferred("disabled", false)
