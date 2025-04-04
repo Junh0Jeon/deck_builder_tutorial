@@ -1,22 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgyh6s28fcw4f"]
+[gd_scene load_steps=12 format=3 uid="uid://dgyh6s28fcw4f"]
 
 [ext_resource type="Script" uid="uid://dp5p8upacdi05" path="res://scenes/enemy/enemy_action_picker.gd" id="1_x4lp6"]
 [ext_resource type="Script" uid="uid://617j3ibgauk" path="res://enemies/crab/crab_attack_action.gd" id="2_agf28"]
 [ext_resource type="Script" uid="uid://bi1s47ctsbh2x" path="res://enemies/crab/crab_block_action.gd" id="3_nch55"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/tile_0103.png" id="3_yv4lo"]
+[ext_resource type="Script" uid="uid://x5kyhibttb6b" path="res://custom_resources/intent.gd" id="4_bm7hr"]
 [ext_resource type="Script" uid="uid://bfd0ta5q5dw5d" path="res://enemies/crab/crab_mega_block_action.gd" id="4_n6jkb"]
+[ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="6_moca1"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="8_trgox"]
+
+[sub_resource type="Resource" id="Resource_yv4lo"]
+script = ExtResource("4_bm7hr")
+number = "7"
+icon = ExtResource("3_yv4lo")
+metadata/_custom_type_script = "uid://x5kyhibttb6b"
+
+[sub_resource type="Resource" id="Resource_bm7hr"]
+script = ExtResource("4_bm7hr")
+number = "6"
+icon = ExtResource("8_trgox")
+metadata/_custom_type_script = "uid://x5kyhibttb6b"
+
+[sub_resource type="Resource" id="Resource_moca1"]
+script = ExtResource("4_bm7hr")
+number = ""
+icon = ExtResource("6_moca1")
+metadata/_custom_type_script = "uid://x5kyhibttb6b"
 
 [node name="CrabEnemyAI" type="Node"]
 script = ExtResource("1_x4lp6")
 
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_agf28")
+intent = SubResource("Resource_yv4lo")
 type = 1
 chance_weight = 1.0
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_nch55")
+intent = SubResource("Resource_bm7hr")
 type = 1
 chance_weight = 1.0
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_n6jkb")
+intent = SubResource("Resource_moca1")

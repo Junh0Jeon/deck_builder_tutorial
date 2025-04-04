@@ -1,8 +1,11 @@
+# 추상클래스
+# 모든 "적 행동"에서 필수 요소를 미리 디자인 해놓은 틀
 class_name EnemyAction
 extends Node
 
 enum Type {CONDITIONAL, CHANCE_BASED}
 
+@export var intent: Intent
 @export var type: Type
 @export_range(0.0, 10.0) var chance_weight := 0.0
 
@@ -19,4 +22,4 @@ func is_performable() -> bool:
 
 func perform_action() -> void:
 	push_error("abstract")
-	pass
+	return
