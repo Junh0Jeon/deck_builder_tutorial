@@ -13,6 +13,7 @@ func perform_action() -> void:
 	var damage_effect := DamageEffect.new()
 	var target_array: Array[Node] = [target] # this 'target' would be 'player'
 	damage_effect.amount = damage
+	damage_effect.sound = sound
 	
 	tween.tween_property(enemy, "global_position", end_pos, 0.4) # TODO : magicNumber
 	tween.tween_callback(damage_effect.execute.bind(target_array))

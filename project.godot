@@ -20,6 +20,8 @@ config/icon="res://icon.png"
 Events="*res://global/events.gd"
 Debug="*res://global/debug.gd"
 ObjectShaker="*res://global/object_shaker.gd"
+MusicPlayer="*res://global/music_player.tscn"
+SFXPlayer="*res://global/sfx_player.tscn"
 
 [display]
 

@@ -17,7 +17,8 @@ texture = ExtResource("1_cs0qh")
 
 [node name="Arrow" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0, -15)
+position = Vector2(17, 0)
+rotation = 1.55756
 texture = ExtResource("3_grvgm")
 flip_v = true
 
