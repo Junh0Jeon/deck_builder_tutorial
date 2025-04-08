@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://csmnj3chsuxwg"]
+[gd_scene load_steps=20 format=3 uid="uid://csmnj3chsuxwg"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_dbktu"]
 [ext_resource type="Script" uid="uid://dk5moey5r2gur" path="res://scenes/battle/battle.gd" id="1_mg7be"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://b2wu68ahf7g8h" path="res://enemies/crab/crab_enemy.tres" id="5_y605o"]
 [ext_resource type="Script" uid="uid://dfdrll5iqxq40" path="res://scenes/ui/battle_ui.gd" id="7_1tpmj"]
 [ext_resource type="PackedScene" uid="uid://byfprl687e32r" path="res://scenes/card_target_selector/card_target_selector.tscn" id="7_ilrlb"]
+[ext_resource type="Resource" uid="uid://c6lwjhl2141t1" path="res://enemies/bat/bat_enemy.tres" id="8_mvulk"]
 [ext_resource type="Script" uid="uid://dx4hgfxxgocae" path="res://scenes/Player/player_handler.gd" id="8_rwihr"]
 [ext_resource type="PackedScene" uid="uid://cg440p30gaxuq" path="res://scenes/ui/mana_ui.tscn" id="11_vm4oe"]
 [ext_resource type="PackedScene" uid="uid://hdljyem52hfw" path="res://scenes/ui/tooltip.tscn" id="12_x010w"]
@@ -44,9 +45,17 @@ debug_color = Color(0, 0.6, 0.701961, 0.121569)
 [node name="EnemyHandler" type="Node2D" parent="."]
 script = ExtResource("4_kd6yx")
 
-[node name="Enemy" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
+[node name="CrabEnemy" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
 position = Vector2(205, 76)
 enemy_stats = ExtResource("5_y605o")
+
+[node name="BatEnemy1" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
+position = Vector2(205, 76)
+enemy_stats = ExtResource("8_mvulk")
+
+[node name="BatEnemy2" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
+position = Vector2(205, 76)
+enemy_stats = ExtResource("8_mvulk")
 
 [node name="Player" parent="." instance=ExtResource("3_itiot")]
 position = Vector2(54, 74)

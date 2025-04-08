@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="CardPile" load_steps=5 format=3 uid="uid://peamcq41tk4i"]
+[gd_resource type="Resource" script_class="CardPile" load_steps=6 format=3 uid="uid://peamcq41tk4i"]
 
 [ext_resource type="Script" uid="uid://c5kw22mri8kyc" path="res://custom_resources/card.gd" id="1_eom50"]
 [ext_resource type="Resource" uid="uid://bqm3qh8bjhmhd" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="2_7s1i5"]
 [ext_resource type="Script" uid="uid://c37jfnaaf58qq" path="res://custom_resources/card_pile.gd" id="2_hfv5e"]
 [ext_resource type="Resource" uid="uid://dcvjrm6wvdxhv" path="res://characters/warrior/cards/warrior_block.tres" id="3_deva5"]
+[ext_resource type="Resource" uid="uid://d0y7axdel8wh7" path="res://characters/warrior/cards/warrior_slash.tres" id="3_ne0bc"]
 
 [resource]
 script = ExtResource("2_hfv5e")
-card_array = Array[ExtResource("1_eom50")]([ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("3_deva5"), ExtResource("3_deva5"), ExtResource("3_deva5"), ExtResource("3_deva5"), ExtResource("3_deva5")])
+card_array = Array[ExtResource("1_eom50")]([ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("2_7s1i5"), ExtResource("3_ne0bc"), ExtResource("3_ne0bc"), ExtResource("3_deva5"), ExtResource("3_deva5"), ExtResource("3_deva5"), ExtResource("3_deva5")])

@@ -1,6 +1,8 @@
 class_name BlockEffect
 extends Effect
 
+signal block_effect_executed
+
 var amount := 0
 
 
@@ -15,3 +17,5 @@ func execute(targets: Array[Node]) -> void:
 		if target is Enemy:
 			target.enemy_stats.block += amount
 			SFXPlayer.play(sound)
+	
+	block_effect_executed.emit()

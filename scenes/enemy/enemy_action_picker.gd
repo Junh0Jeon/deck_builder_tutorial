@@ -1,3 +1,4 @@
+# Enemy Action Manager에서 공유하는 스크립트. 수정 주의!
 class_name EnemyActionPicker
 extends Node
 
