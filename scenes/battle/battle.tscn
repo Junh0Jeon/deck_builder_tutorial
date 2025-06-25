@@ -50,11 +50,11 @@ position = Vector2(205, 76)
 enemy_stats = ExtResource("5_y605o")
 
 [node name="BatEnemy1" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
-position = Vector2(205, 76)
+position = Vector2(172, 57)
 enemy_stats = ExtResource("8_mvulk")
 
 [node name="BatEnemy2" parent="EnemyHandler" instance=ExtResource("2_j5jxt")]
-position = Vector2(205, 76)
+position = Vector2(173, 112)
 enemy_stats = ExtResource("8_mvulk")
 
 [node name="Player" parent="." instance=ExtResource("3_itiot")]

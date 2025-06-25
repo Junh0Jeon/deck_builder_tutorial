@@ -27,7 +27,7 @@ func _ready() -> void:
 
 
 func start_battle(stats: CharacterStats) -> void:
-	get_tree().paused = false
+	get_tree().paused = false # return BattleOverPanel effect
 	MusicPlayer.play(music, true)
 	enemy_handler.reset_enemy_actions()
 	player_handler.start_battle(stats)

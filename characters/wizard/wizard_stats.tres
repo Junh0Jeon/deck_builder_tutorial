@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=3 format=3 uid="uid://rex7dn2bgty4"]
+
+[ext_resource type="Texture2D" uid="uid://dpfqok8tuy4r7" path="res://art/tile_0084.png" id="1_uly2f"]
+[ext_resource type="Script" uid="uid://dqp51vg81diqa" path="res://custom_resources/character_stats.gd" id="1_vwxk2"]
+
+[resource]
+script = ExtResource("1_vwxk2")
+character_name = "Wizard"
+description = "magic"
+portrait = ExtResource("1_uly2f")
+cards_per_turn = 5
+max_mana = 4
+max_health = 20
+art = ExtResource("1_uly2f")
+metadata/_custom_type_script = "uid://dqp51vg81diqa"

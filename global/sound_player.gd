@@ -6,7 +6,7 @@ extends Node
 
 
 ## 음악 재생 함수
-## single: 이 음악만 재생할지 유무 flag
+## solo: 이 음악만 재생할지 유무 flag
 func play(audio: AudioStream, solo = false) -> void:
 	if not audio:
 		push_error("AudioStream말고 다른 변수 사용 확인됨")
